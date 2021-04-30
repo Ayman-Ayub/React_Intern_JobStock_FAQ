@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
     const path =window.location.pathname
@@ -14,9 +14,9 @@ const FAQ = () => {
 								<div className="panel panel-default">
 									<div className="panel-heading" role="tab" id="headingOne">
 										<h4 className="panel-title">
-											<link role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+											<Link role="button" data-toggle="collapse" data-parent="#accordion" to="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
 											   Our Work Process
-											</link>
+											</Link>
 										</h4>
 									</div>
 									<div id="collapseOne" className="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
@@ -28,9 +28,9 @@ const FAQ = () => {
 								<div className="panel panel-default">
 									<div className="panel-heading" role="tab" id="headingTwo">
 										<h4 className="panel-title">
-											<link className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											<Link className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" to="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
 												What We Do?
-											</link>
+											</Link>
 										</h4>
 									</div>
 									<div id="collapseTwo" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
@@ -42,9 +42,9 @@ const FAQ = () => {
 								<div className="panel panel-default">
 									<div className="panel-heading" role="tab" id="headingThree">
 										<h4 className="panel-title">
-											<link className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											<Link className="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" to="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
 												How We Do?
-											</link>
+											</Link>
 										</h4>
 									</div>
 									<div id="collapseThree" className="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
