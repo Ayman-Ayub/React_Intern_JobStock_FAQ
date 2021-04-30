@@ -1,38 +1,39 @@
 import React from "react";
-
-import A from "../img/logo-white.png"
+import { Link } from "react-router-dom";
+import A from "../img/logo.png"
 
 const Navbar = () => {
     const path =window.location.pathname
     return (
       <>
-        <nav className={`navbar navbar-default navbar-fixed ${path=='/'?"navbar-transparent":"navbar-white"} white bootsnav`}>
+        <nav className="navbar navbar-default navbar-fixed navbar-light white bootsnav">
             <div className="container">
                 <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                     <i className="fa fa-bars"> </i>
                 </button>
                 <div className="navbar-header">
-                    <a className="navbar-brand" href="index-2.html">
-                        <img src={A} className="logo logo-display" alt=""/>
-                        <img src={A} className="logo logo-scrolled" alt=""/>
-                        </a>
+                    <Link className="navbar-brand" to="index-2.html">
+                        <img src={A} className="logo logo-scrolled" alt=""></img>
+                        </Link>
                     </div>
                 <div className="collapse navbar-collapse" id="navbar-menu">
                     <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                   
                         <li>
-                            <a href="login.html"> <i className="fa fa-pencil" aria-hidden="true"> </i>SignUp</a>
+                            <Link to="login.html"> <i className="fa fa-pencil" aria-hidden="true"> </i>SignUp</Link>
                         </li>
                         <li>
-                            <a href="pricing.html"> <i className="fa fa-sign-in" aria-hidden="true"> </i>Pricing</a>
+                            <Link to="pricing.html"> <i className="fa fa-sign-in" aria-hidden="true"> </i>Pricing</Link>
                         </li>
                         <li className="left-br">
-                            <a href="javascript:void(0)" data-toggle="modal" data-target="#signup" className="signin">Sign In Now</a>
+                            <Link to="javascript:void(0)" data-toggle="modal" data-target="#signup" className="signin">Sign In Now</Link>
                         </li>
                     </ul>
 
                     <ul className="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li class="active"><input type="text" class="form-control" placeholder="Find Freelancer"></input></li>
                         <li className="dropdown megamenu-fw">
-                            <a href="#" className="dropdown-toggle" data-toggle="dropdown">Brows</a>
+                            <Link to="#" className="dropdown-toggle" data-toggle="dropdown">Brows</Link>
                             <ul className="dropdown-menu megamenu-content" role="menu">
                                 <li>
                                     <div className="row">
@@ -41,16 +42,16 @@ const Navbar = () => {
                                             <h6 className="title">Main Pages</h6>
                                             <div className="content">
                                                 <ul className="menu-col">
-                                                    <li><a href="index-2.html">Home Page 1</a></li>
-                                                    <li><a href="index-3.html">Home Page 2</a></li>
-                                                    <li><a href="index-4.html">Home Page 3</a></li>
-                                                    <li><a href="index-5.html">Home Page 4</a></li>
-                                                    <li><a href="index-6.html">Home Page 5</a></li>
-                                                    <li><a href="freelancing.html">Freelancing</a></li>
-                                                    <li><a href="signin-signup.html">Sign In / Sign Up</a></li>
-                                                    <li><a href="search-job.html">Search Job</a></li>
-                                                    <li><a href="accordion.html">Accordion</a></li>
-                                                    <li><a href="tab.html">Tab Style</a></li>
+                                                    <li><Link to="index-2.html">Home Page 1</Link></li>
+                                                    <li><Link to="index-3.html">Home Page 2</Link></li>
+                                                    <li><Link to="index-4.html">Home Page 3</Link></li>
+                                                    <li><Link to="index-5.html">Home Page 4</Link></li>
+                                                    <li><Link to="index-6.html">Home Page 5</Link></li>
+                                                    <li><Link to="freelancing.html">Freelancing</Link></li>
+                                                    <li><Link to="signin-signup.html">Sign In / Sign Up</Link></li>
+                                                    <li><Link to="search-job.html">Search Job</Link></li>
+                                                    <li><Link to="accordion.html">Accordion</Link></li>
+                                                    <li><Link to="tab.html">Tab Style</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -59,16 +60,16 @@ const Navbar = () => {
                                             <h6 className="title">For Candidate</h6>
                                             <div className="content">
                                                 <ul className="menu-col">
-                                                    <li><a href="browse-jobs.html">Browse Jobs</a></li>
-                                                    <li><a href="browse-company.html">Browse Companies</a></li>
-                                                    <li><a href="create-resume.html">Create Resume</a></li>
-                                                    <li><a href="resume-detail.html">Resume Detail</a></li>
-                                                    <li><a href="#">Manage Jobs</a></li>
-                                                    <li><a href="job-detail.html">Job Detail</a></li>
-                                                    <li><a href="browse-jobs-grid.html">Job In Grid</a></li>
-                                                    <li><a href="candidate-profile.html">Candidate Profile</a></li>
-                                                    <li><a href="manage-resume-2.html">Manage Resume 2</a></li>
-                                                    <li><a href="company-detail.html">Company Detail</a></li>
+                                                    <li><Link to="browse-jobs.html">Browse Jobs</Link></li>
+                                                    <li><Link to="browse-company.html">Browse Companies</Link></li>
+                                                    <li><Link to="create-resume.html">Create Resume</Link></li>
+                                                    <li><Link to="resume-detail.html">Resume Detail</Link></li>
+                                                    <li><Link to="#">Manage Jobs</Link></li>
+                                                    <li><Link to="job-detail.html">Job Detail</Link></li>
+                                                    <li><Link to="browse-jobs-grid.html">Job In Grid</Link></li>
+                                                    <li><Link to="candidate-profile.html">Candidate Profile</Link></li>
+                                                    <li><Link to="manage-resume-2.html">Manage Resume 2</Link></li>
+                                                    <li><Link to="company-detail.html">Company Detail</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -77,16 +78,16 @@ const Navbar = () => {
                                             <h6 className="title">For Employer</h6>
                                             <div className="content">
                                                 <ul className="menu-col">
-                                                    <li><a href="create-job.html">Create Job</a></li>
-                                                    <li><a href="create-company.html">Create Company</a></li>
-                                                    <li><a href="manage-company.html">Manage Company</a></li>
-                                                    <li><a href="manage-candidate.html">Manage Candidate</a></li>
-                                                    <li><a href="manage-employee.html">Manage Employee</a></li>
-                                                    <li><a href="browse-resume.html">Browse Resume</a></li>
-                                                    <li><a href="search-new.html">New Search Job</a></li>
-                                                    <li><a href="employer-profile.html">Employer Profile</a></li>
-                                                    <li><a href="manage-resume.html">Manage Resume</a></li>
-                                                    <li><a href="new-job-detail.html">New Job Detail</a></li>
+                                                    <li><Link to="create-job.html">Create Job</Link></li>
+                                                    <li><Link to="create-company.html">Create Company</Link></li>
+                                                    <li><Link to="manage-company.html">Manage Company</Link></li>
+                                                    <li><Link to="manage-candidate.html">Manage Candidate</Link></li>
+                                                    <li><Link to="manage-employee.html">Manage Employee</Link></li>
+                                                    <li><Link to="browse-resume.html">Browse Resume</Link></li>
+                                                    <li><Link to="search-new.html">New Search Job</Link></li>
+                                                    <li><Link to="employer-profile.html">Employer Profile</Link></li>
+                                                    <li><Link to="manage-resume.html">Manage Resume</Link></li>
+                                                    <li><Link to="new-job-detail.html">New Job Detail</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -95,16 +96,16 @@ const Navbar = () => {
                                             <h6 className="title">Extra Pages <span className="new-offer">New</span></h6>
                                             <div className="content">
                                                 <ul className="menu-col">
-                                                    <li><a href="freelancer-detail.html">Freelancer detail</a></li>
-                                                    <li><a href="job-apply-detail.html">New Apply Job</a></li>
-                                                    <li><a href="payment-methode.html">Payment Methode</a></li>
-                                                    <li><a href="new-login-signup.html">New LogIn / SignUp</a></li>
-                                                    <li><a href="freelancing-jobs.html">Freelancing Jobs</a></li>
-                                                    <li><a href="freelancers.html">Freelancers</a></li>
-                                                    <li><a href="freelancers-2.html">Freelancers 2</a></li>
-                                                    <li><a href="premium-candidate.html">Premium Candidate</a></li>
-                                                    <li><a href="premium-candidate-detail.html">Premium Candidate Detail</a></li>
-                                                    <li><a href="blog-detail.html">Blog detail</a></li>
+                                                    <li><Link to="freelancer-detail.html">Freelancer detail</Link></li>
+                                                    <li><Link to="job-apply-detail.html">New Apply Job</Link></li>
+                                                    <li><Link to="payment-methode.html">Payment Methode</Link></li>
+                                                    <li><Link to="new-login-signup.html">New LogIn / SignUp</Link></li>
+                                                    <li><Link to="freelancing-jobs.html">Freelancing Jobs</Link></li>
+                                                    <li><Link to="freelancers.html">Freelancers</Link></li>
+                                                    <li><Link to="freelancers-2.html">Freelancers 2</Link></li>
+                                                    <li><Link to="premium-candidate.html">Premium Candidate</Link></li>
+                                                    <li><Link to="premium-candidate-detail.html">Premium Candidate Detail</Link></li>
+                                                    <li><Link to="blog-detail.html">Blog detail</Link></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -112,7 +113,7 @@ const Navbar = () => {
                                 </li>
                             </ul>
                         </li>
-                        <li><a href="blog.html">Blog</a></li>
+                        <li><Link to="blog.html">Blog</Link></li>
                     </ul>
                 </div>
             </div>
